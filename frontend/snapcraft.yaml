@@ -1,0 +1,29 @@
+name: jbuntutweaks
+base: core22
+version: '1.0'
+summary: Small Ubuntu tweaks for convenience.
+description: |
+  Small tweaks for Ubuntu 22-24 that make the system more trusting and convenient.
+grade: devel
+confinement: strict
+apps:
+  jbuntutweaks:
+    command: bin/main.py
+    plugs:
+      - desktop
+      - desktop-legacy
+      - home
+      - network
+      - system-files
+      - gsettings
+parts:
+  app:
+    source: .
+    plugin: python
+    stage-packages:
+      - libgirepository-1.0-1
+      - gir1.2-gtk-4.0
+      - python3-gi
+      - libgtk-4-1
+    prime:
+      - -*.yaml
