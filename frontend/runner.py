@@ -7,3 +7,6 @@ class Runner():
         return platform.system() == "Windows"
     def is_linux():
         return platform.system() == "Linux"
+    
+    def is_dev():
+        return True # TODO: This should check if its the built app or not

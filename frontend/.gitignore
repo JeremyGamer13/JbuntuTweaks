@@ -218,3 +218,6 @@ __marimo__/
 # extra stuff
 # glade
 *.glade~
+
+# dev
+.dev/*
